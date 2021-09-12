@@ -1,9 +1,12 @@
 import * as React from "react";
+import Layout from "../components/layout.js";
 
 const AboutPage = () => {
   return (
     <main>
-      <div>About</div>
+      <Layout>
+        <h1>about</h1>
+      </Layout>
     </main>
   );
 };
