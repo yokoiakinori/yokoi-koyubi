@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/layout.js";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 // markup
 const IndexPage = ({ data }) => {
@@ -10,7 +10,9 @@ const IndexPage = ({ data }) => {
         <h1>TOP</h1>
         {data.allMarkdownRemark.nodes.map((node) => (
           <div key={node.id}>
-            <h2>{node.frontmatter.title}</h2>
+            <Link to={node.fields.slug}>
+              <h2>{node.frontmatter.title}</h2>
+            </Link>
             <p>{node.frontmatter.date}</p>
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
           </div>
@@ -25,6 +27,9 @@ export const query = graphql`
     allMarkdownRemark {
       nodes {
         html
+        fields {
+          slug
+        }
         frontmatter {
           date
           title
