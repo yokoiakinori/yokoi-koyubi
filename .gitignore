@@ -143,4 +143,6 @@ dist
 
 .variable
 
+.env.development
+
 > > > > > > > origin/master
