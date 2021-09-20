@@ -1,6 +1,6 @@
-const path = require('path');
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+const path = require("path");
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
 });
 module.exports = {
   siteMetadata: {
@@ -43,6 +43,18 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
       __key: "src",
+    },
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: process.env.API_KEY,
+        serviceId: "koyubi",
+        apis: [
+          {
+            endpoint: "blog",
+          },
+        ],
+      },
     },
   ],
 };

@@ -8,15 +8,13 @@ const IndexPage = ({ data }) => {
     <main>
       <Layout>
         <h1>TOP</h1>
-        {data.allMarkdownRemark.nodes.map((node) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <h2>{node.frontmatter.title}</h2>
-            </Link>
-            <p>{node.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-          </div>
-        ))}
+        <ul>
+          {data.allMicrocmsBlog.edges.map(({ node }) => (
+            <li key={node.blogId}>
+              <Link to={`/blog/${node.blogId}`}>{node.title}</Link>
+            </li>
+          ))}
+        </ul>
       </Layout>
     </main>
   );
@@ -24,14 +22,10 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark {
-      nodes {
-        html
-        fields {
-          slug
-        }
-        frontmatter {
-          date
+    allMicrocmsBlog {
+      edges {
+        node {
+          blogId
           title
         }
       }
