@@ -14,8 +14,10 @@ const Header = () => {
         <Link to="/">こゆび</Link>
         <ul className={"flexRowCenter"}>
           {nav.map((item) => (
-            <li key={item.name} className={"margin1"}>
-              <Link to={item.path}>{item.name}</Link>
+            <li key={item.name} className={"margin1-5"}>
+              <Link to={item.path} className={"navItem"}>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
