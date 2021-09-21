@@ -7,14 +7,7 @@ const CategoryPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <h1>TOP</h1>
-        <ul>
-          {data.allMicrocmsBlog.edges.map(({ node }) => (
-            <li key={node.blogId}>
-              <Link to={`/blog/${node.blogId}`}>{node.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <p>準備中です🐈</p>
       </Layout>
     </main>
   );
