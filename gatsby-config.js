@@ -51,6 +51,10 @@ module.exports = {
         serviceId: process.env.SERVICE_ID,
         apis: [
           {
+            endpoint: "about",
+            format: "object",
+          },
+          {
             endpoint: "blog",
           },
         ],

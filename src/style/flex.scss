@@ -1,0 +1,65 @@
+.flexColumn{
+    display: flex;
+    flex-flow: column;
+}
+
+.flexRow{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flexRowCenter{
+    @extend .flexRow;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexColumnCenter{
+    @extend .flexColumn;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexRowAlignCenter{
+    @extend .flexRow;
+    align-items: center;
+}
+
+.flexColumnAlignCenter{
+    @extend .flexColumn;
+    align-items: center;
+}
+
+.flexRowSpaceBetween{
+    @extend .flexRow;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexRowLeft{
+    @extend .flexRow;
+    justify-content: start;
+}
+
+.flexRowAlignStart{
+    @extend .flexRow;
+    align-content: flex-start;
+}
+
+.flexColumnAlignStart{
+    @extend .flexColumn;
+    align-items: flex-start;
+}
+
+.flexRowStart{
+    @extend .flexRow;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.flexColumnStart{
+    @extend .flexColumn;
+    align-items: flex-start;
+    justify-content: start;
+}
+

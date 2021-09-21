@@ -1,0 +1,100 @@
+$standardValue:10px;
+$magnification1:1;
+$magnification1-5:1.5;
+$magnification2:2;
+$magnification3:3;
+$magnification4:4;
+@function sizeAdjustment($magnification){
+    @return $standardValue*$magnification
+};
+
+.margin1{
+    margin: sizeAdjustment($magnification1);
+};
+.margin1_side{
+    margin: 0 sizeAdjustment($magnification1);
+};
+.margin1_vertical{
+    margin:sizeAdjustment($magnification1) 0;
+};
+.margin1_top{
+    margin-top: sizeAdjustment($magnification1);
+};
+.margin1_bottom{
+    margin-bottom: sizeAdjustment($magnification1);
+};
+.margin1_left{
+    margin-left: sizeAdjustment($magnification1);
+};
+.margin1_right{
+    margin-right: sizeAdjustment($magnification1);
+};
+
+
+.margin1-5{
+    margin: sizeAdjustment($magnification1-5);
+};
+.margin1-5_side{
+    margin: 0 sizeAdjustment($magnification1-5);
+};
+.margin1-5_vertical{
+    margin:sizeAdjustment($magnification1-5) 0;
+};
+.margin1-5_top{
+    margin-top: sizeAdjustment($magnification1-5);
+};
+.margin1-5_bottom{
+    margin-bottom: sizeAdjustment($magnification1-5);
+};
+.margin1-5_left{
+    margin-left: sizeAdjustment($magnification1-5);
+};
+.margin1-5_right{
+    margin-right: sizeAdjustment($magnification1-5);
+};
+
+
+.margin2{
+    margin: sizeAdjustment($magnification2);
+};
+.margin2_side{
+    margin: 0 sizeAdjustment($magnification2);
+};
+.margin2_vertical{
+    margin:sizeAdjustment($magnification2) 0;
+};
+.margin2_top{
+    margin-top: sizeAdjustment($magnification2);
+};
+.margin2_bottom{
+    margin-bottom: sizeAdjustment($magnification2);
+};
+.margin2_left{
+    margin-left: sizeAdjustment($magnification2);
+};
+.margin2_right{
+    margin-right: sizeAdjustment($magnification2);
+};
+
+
+.margin3{
+    margin: sizeAdjustment($magnification3);
+};
+.margin3_side{
+    margin: 0 sizeAdjustment($magnification3);
+};
+.margin3_vertical{
+    margin:sizeAdjustment($magnification3) 0;
+};
+.margin3_top{
+    margin-top: sizeAdjustment($magnification3);
+};
+.margin3_bottom{
+    margin-bottom: sizeAdjustment($magnification3);
+};
+.margin3_left{
+    margin-left: sizeAdjustment($magnification3);
+};
+.margin3_right{
+    margin-right: sizeAdjustment($magnification3);
+};

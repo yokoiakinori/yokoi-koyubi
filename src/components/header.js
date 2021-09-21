@@ -1,30 +1,23 @@
-import * as React from "react";
-import { useStaticQuery, Link } from "gatsby";
-import { graphql } from "gatsby";
+import React from "react";
+import { Link } from "gatsby";
+import * as styles from "./header.module.scss";
 
 const Header = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  );
+  const nav = [
+    { path: "/about", name: "サイトについて" },
+    { path: "/category", name: "カテゴリー" },
+    { path: "/form", name: "お問い合わせ" },
+  ];
   return (
-    <header>
-      <h2>{data.site.siteMetadata.title}</h2>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">TOP</Link>
-          </li>
-          <li>
-            <Link to="/about">about</Link>
-          </li>
+    <header className={"flexRowAlignCenter"}>
+      <nav className={"flexRowSpaceBetween"}>
+        <Link to="/">こゆび</Link>
+        <ul className={"flexRowCenter"}>
+          {nav.map((item) => (
+            <li key={item.name} className={"margin1"}>
+              <Link to={item.path}>{item.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
