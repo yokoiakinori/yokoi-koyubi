@@ -1,0 +1,30 @@
+@import "../style/common.scss";
+
+.input {
+  margin-bottom: 25px;
+}
+
+.shadebutton {
+  width: 150px;
+  height: 45px;
+  font-size: 17px !important;
+  font-family: "Hiragino Sans" !important;
+  font-weight: 600 !important;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border: solid 1.5px black;
+  transition-duration: 0.3s;
+  box-shadow: 3px 3px rgba(black, 0.3);
+
+  &:hover {
+    background-color: black;
+    color: white;
+    transition-duration: 0.3s;
+  }
+}
+
+.submit {
+  margin-top: 30px;
+  @extend .flexRowCenter;
+}

@@ -88,6 +88,26 @@ p {
   line-height: 2;
 }
 
+input {
+  border: solid 1px;
+  padding: 10px;
+  height: 15px;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+textarea {
+  border: solid 1px;
+  padding: 10px;
+  height: 100px;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+label {
+  margin-bottom: 7px;
+}
+
 .copyright {
   color: #777;
 }
