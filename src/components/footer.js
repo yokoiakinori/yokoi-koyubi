@@ -3,7 +3,9 @@ import * as React from "react";
 const Header = () => {
   return (
     <footer>
-      <div>© Gatsby Blog Site {new Date().getFullYear()}</div>
+      <p className={"copyright"}>
+        © Gatsby Blog Site {new Date().getFullYear()}
+      </p>
     </footer>
   );
 };

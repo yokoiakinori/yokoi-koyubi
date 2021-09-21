@@ -1,65 +1,69 @@
-.flexColumn{
-    display: flex;
-    flex-flow: column;
+.flexColumn {
+  display: flex;
+  flex-flow: column;
 }
 
-.flexRow{
-    display: flex;
-    flex-flow: row wrap;
+.flexRow {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.flexRowCenter{
-    @extend .flexRow;
-    justify-content: center;
-    align-items: center;
+.flexRowNowrap {
+  display: flex;
+  flex-flow: row;
 }
 
-.flexColumnCenter{
-    @extend .flexColumn;
-    justify-content: center;
-    align-items: center;
+.flexRowCenter {
+  @extend .flexRow;
+  justify-content: center;
+  align-items: center;
 }
 
-.flexRowAlignCenter{
-    @extend .flexRow;
-    align-items: center;
+.flexColumnCenter {
+  @extend .flexColumn;
+  justify-content: center;
+  align-items: center;
 }
 
-.flexColumnAlignCenter{
-    @extend .flexColumn;
-    align-items: center;
+.flexRowAlignCenter {
+  @extend .flexRow;
+  align-items: center;
 }
 
-.flexRowSpaceBetween{
-    @extend .flexRow;
-    align-items: center;
-    justify-content: space-between;
+.flexColumnAlignCenter {
+  @extend .flexColumn;
+  align-items: center;
 }
 
-.flexRowLeft{
-    @extend .flexRow;
-    justify-content: start;
+.flexRowSpaceBetween {
+  @extend .flexRow;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.flexRowAlignStart{
-    @extend .flexRow;
-    align-content: flex-start;
+.flexRowLeft {
+  @extend .flexRow;
+  justify-content: start;
 }
 
-.flexColumnAlignStart{
-    @extend .flexColumn;
-    align-items: flex-start;
+.flexRowAlignStart {
+  @extend .flexRow;
+  align-content: flex-start;
 }
 
-.flexRowStart{
-    @extend .flexRow;
-    align-items: flex-start;
-    justify-content: start;
+.flexColumnAlignStart {
+  @extend .flexColumn;
+  align-items: flex-start;
 }
 
-.flexColumnStart{
-    @extend .flexColumn;
-    align-items: flex-start;
-    justify-content: start;
+.flexRowStart {
+  @extend .flexRow;
+  align-items: flex-start;
+  justify-content: start;
 }
 
+.flexColumnStart {
+  @extend .flexColumn;
+  align-items: flex-start;
+  justify-content: start;
+}

@@ -22,6 +22,12 @@ header {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
+footer {
+  width: 100vw;
+  height: 80px;
+  background-color: #333;
+}
+
 nav {
   width: 100%;
   padding: 0 30px;
@@ -72,13 +78,45 @@ h3 {
   }
 }
 
+h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
 p {
   font-size: 16px;
   line-height: 2;
 }
 
+.copyright {
+  color: #777;
+}
+
 .wrapper {
-  margin: auto;
+  margin: 70px auto;
   width: 90vw;
   max-width: 1100px;
+}
+$thumbnailSize: 200px;
+.thumbnail {
+  margin-right: 30px;
+  width: $thumbnailSize;
+  height: $thumbnailSize;
+  border-radius: 50%;
+}
+
+.contributor {
+  background-color: #eee;
+  @extend .flexRowNowrap;
+  align-items: center;
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.introduction {
+  p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
 }
