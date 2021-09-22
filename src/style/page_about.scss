@@ -1,0 +1,30 @@
+$thumbnailSize: 200px;
+.thumbnail {
+  margin-right: 30px;
+  width: $thumbnailSize;
+  height: $thumbnailSize;
+  border-radius: 50%;
+}
+
+.contributor {
+  background-color: #eee;
+  @extend .flexRowNowrap;
+  align-items: center;
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 10px;
+  h4 {
+    font-size: 19px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+  }
+}
+
+.introduction {
+  p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}

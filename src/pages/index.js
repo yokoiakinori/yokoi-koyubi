@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <div className={"mainContents"}>
+        <div className={"blogWrapper"}>
           <ul>
             {data.allMicrocmsBlog.edges.map(({ node }) => (
               <li key={node.blogId}>
@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
               </li>
             ))}
           </ul>
-          <div className={"right"}></div>
+          <div className={"blogSub"}></div>
         </div>
       </Layout>
     </main>

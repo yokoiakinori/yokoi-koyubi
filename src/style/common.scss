@@ -1,7 +1,8 @@
 @import "flex.scss";
 @import "margin.scss";
 @import "nav.scss";
-@import "blog.scss";
+@import "page_blog.scss";
+@import "page_about.scss";
 $accentColor: rgb(15, 170, 162);
 
 html,
@@ -25,7 +26,7 @@ header {
 
 footer {
   width: 100vw;
-  height: 80px;
+  height: 120px;
   background-color: #333;
 }
 
@@ -109,56 +110,8 @@ label {
   margin-bottom: 7px;
 }
 
-.copyright {
-  color: #777;
-}
-
 .wrapper {
   margin: 70px auto;
   width: 90vw;
   max-width: 1100px;
-}
-$thumbnailSize: 200px;
-.thumbnail {
-  margin-right: 30px;
-  width: $thumbnailSize;
-  height: $thumbnailSize;
-  border-radius: 50%;
-}
-
-.contributor {
-  background-color: #eee;
-  @extend .flexRowNowrap;
-  align-items: center;
-  margin-top: 40px;
-  padding: 40px;
-  border-radius: 10px;
-  h4 {
-    font-size: 19px;
-    padding: 0.7rem 1.5rem;
-    border-radius: 10px;
-    background-color: black;
-    color: white;
-  }
-}
-
-.introduction {
-  p {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-}
-
-$ratio: 25%;
-
-.right {
-  width: $ratio;
-  background-color: #eee;
-}
-
-.mainContents {
-  @extend .flexRow;
-  ul {
-    width: 100%-$ratio;
-  }
 }

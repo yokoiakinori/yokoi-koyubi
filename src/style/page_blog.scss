@@ -1,3 +1,17 @@
+$ratio: 25%;
+
+.blogSub {
+  width: $ratio;
+  background-color: #eee;
+}
+
+.blogWrapper {
+  @extend .flexRow;
+  ul {
+    width: 100%-$ratio;
+  }
+}
+
 .blogItem {
   @extend .flexRowNowrap;
   img {
