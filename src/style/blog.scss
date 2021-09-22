@@ -1,5 +1,5 @@
 .blogItem {
-  @extend .flexRow;
+  @extend .flexRowNowrap;
   img {
     width: 320px;
     height: 200px;
