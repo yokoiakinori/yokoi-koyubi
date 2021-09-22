@@ -1,0 +1,31 @@
+.blogItem {
+  @extend .flexRow;
+  img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+    border-radius: 5px;
+  }
+  p {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+    border: solid 1.5px $accentColor;
+    color: $accentColor;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  .date {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+  }
+}

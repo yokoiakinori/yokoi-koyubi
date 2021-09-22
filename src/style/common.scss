@@ -1,7 +1,8 @@
 @import "flex.scss";
 @import "margin.scss";
 @import "nav.scss";
-$accentColor: #333;
+@import "blog.scss";
+$accentColor: rgb(15, 170, 162);
 
 html,
 body {
@@ -145,5 +146,19 @@ $thumbnailSize: 200px;
   p {
     font-size: 14px;
     line-height: 1.8;
+  }
+}
+
+$ratio: 25%;
+
+.right {
+  width: $ratio;
+  background-color: #eee;
+}
+
+.mainContents {
+  @extend .flexRow;
+  ul {
+    width: 100%-$ratio;
   }
 }

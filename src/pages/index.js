@@ -7,14 +7,23 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <h1>TOP</h1>
-        <ul>
-          {data.allMicrocmsBlog.edges.map(({ node }) => (
-            <li key={node.blogId}>
-              <Link to={`/blog/${node.blogId}`}>{node.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <div className={"mainContents"}>
+          <ul>
+            {data.allMicrocmsBlog.edges.map(({ node }) => (
+              <li key={node.blogId}>
+                <Link to={`/blog/${node.blogId}`} className={"blogItem"}>
+                  <img src={node.header_image.url} alt="" />
+                  <div>
+                    <p>{node.title}</p>
+                    <button>{node.category}</button>
+                    <p className={"date"}>{node.createdAt}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className={"right"}></div>
+        </div>
       </Layout>
     </main>
   );
@@ -27,6 +36,11 @@ export const query = graphql`
         node {
           blogId
           title
+          category
+          createdAt(formatString: "YYYY/MM/DD")
+          header_image {
+            url
+          }
         }
       }
     }
