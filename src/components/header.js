@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import * as styles from "./header.module.scss";
+import Logo from "../images/koyubilogo.png";
 
 const Header = () => {
   const nav = [
@@ -11,7 +12,9 @@ const Header = () => {
   return (
     <header className={"flexRowAlignCenter"}>
       <nav className={"flexRowSpaceBetween"}>
-        <Link to="/">こゆび</Link>
+        <Link to="/">
+          <img src={Logo} className={"logo"} alt="logo" />
+        </Link>
         <ul className={"flexRowCenter"}>
           {nav.map((item) => (
             <li key={item.name} className={"margin1-5"}>
