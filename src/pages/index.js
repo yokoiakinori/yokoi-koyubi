@@ -1,6 +1,8 @@
 import * as React from "react";
 import Layout from "../components/layout.js";
 import MicroCmsImage from "../components/microcmsImage.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 
 // markup
@@ -17,13 +19,16 @@ const IndexPage = ({ data }) => {
                     url={node.header_image.url}
                     compress="auto=compress"
                     format="auto=format"
-                    width="w=450"
+                    width="w=500"
                     height="h=450"
                   />
                   <div>
                     <p>{node.title}</p>
                     <button>{node.category}</button>
-                    <p className={"date"}>{node.createdAt}</p>
+                    <p className={"date"}>
+                      <FontAwesomeIcon icon={faClock} />
+                      {node.createdAt}
+                    </p>
                   </div>
                 </Link>
               </li>

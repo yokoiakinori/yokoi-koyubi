@@ -1,5 +1,6 @@
 import * as React from "react";
 import Layout from "../../components/layout.js";
+import MicroCmsImage from "../../components/microcmsImage.js";
 import { graphql, Link } from "gatsby";
 
 // markup
@@ -7,12 +8,21 @@ const BlogPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <h1>{data.microcmsBlog.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${data.microcmsBlog.contents}`,
-          }}
-        ></div>
+        <div className={"blogDetail"}>
+          <MicroCmsImage
+            url={data.microcmsBlog.header_image.url}
+            compress="auto=compress"
+            format="auto=format"
+            width="w=700"
+            height="h=700"
+          />
+          <h1>{data.microcmsBlog.title}</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${data.microcmsBlog.contents}`,
+            }}
+          ></div>
+        </div>
       </Layout>
     </main>
   );
@@ -24,6 +34,9 @@ export const query = graphql`
       blogId
       title
       contents
+      header_image {
+        url
+      }
     }
   }
 `;
