@@ -8,20 +8,23 @@ const BlogPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <div className={"blogDetail"}>
-          <MicroCmsImage
-            url={data.microcmsBlog.header_image.url}
-            compress="auto=compress"
-            format="auto=format"
-            width="w=700"
-            height="h=700"
-          />
-          <h1>{data.microcmsBlog.title}</h1>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${data.microcmsBlog.contents}`,
-            }}
-          ></div>
+        <div className={"blogWrapper"}>
+          <div>
+            <MicroCmsImage
+              url={data.microcmsBlog.header_image.url}
+              compress="auto=compress"
+              format="auto=format"
+              width="w=700"
+              height="h=700"
+            />
+            <h1>{data.microcmsBlog.title}</h1>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${data.microcmsBlog.contents}`,
+              }}
+            ></div>
+          </div>
+          <div className={"blogSub"}></div>
         </div>
       </Layout>
     </main>
