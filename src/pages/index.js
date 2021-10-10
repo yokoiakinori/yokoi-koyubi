@@ -23,8 +23,8 @@ const IndexPage = ({ data }) => {
                     height="h=450"
                   />
                   <div>
-                    <p>{node.title}</p>
-                    <button>{node.category}</button>
+                    <h2>{node.title}</h2>
+                    <button className="blogCategory">{node.category}</button>
                     <p className={"date"}>
                       <FontAwesomeIcon icon={faClock} />
                       {node.createdAt}
