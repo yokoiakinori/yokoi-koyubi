@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
                     <button className="blogCategory">{node.category}</button>
                     <p className={"date"}>
                       <FontAwesomeIcon icon={faClock} />
-                      {node.createdAt}
+                      {node.updatedAt}
                     </p>
                   </div>
                 </Link>
@@ -49,7 +49,7 @@ export const query = graphql`
           blogId
           title
           category
-          createdAt(formatString: "YYYY/MM/DD")
+          updatedAt(formatString: "YYYY/MM/DD")
           header_image {
             url
           }

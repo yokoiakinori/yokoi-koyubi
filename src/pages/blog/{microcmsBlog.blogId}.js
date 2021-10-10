@@ -25,7 +25,7 @@ const BlogPage = ({ data }) => {
             </button>
             <p className={"date"}>
               <FontAwesomeIcon icon={faClock} />
-              {data.microcmsBlog.createdAt}
+              {data.microcmsBlog.updatedAt}
             </p>
             <div
               className={"contents"}
@@ -48,7 +48,7 @@ export const query = graphql`
       title
       category
       contents
-      createdAt(formatString: "YYYY/MM/DD")
+      updatedAt(formatString: "YYYY/MM/DD")
       header_image {
         url
       }
