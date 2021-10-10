@@ -3,9 +3,7 @@ import * as React from "react";
 const Header = () => {
   return (
     <footer>
-      <p className={"copyright"}>
-        © Koyubi Yokoi Akinori {new Date().getFullYear()}
-      </p>
+      <p className={"copyright"}>© Koyubi Yokoi {new Date().getFullYear()}</p>
     </footer>
   );
 };
