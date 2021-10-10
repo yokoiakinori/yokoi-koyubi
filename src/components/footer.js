@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <footer>
       <p className={"copyright"}>
-        © Gatsby Blog Site {new Date().getFullYear()}
+        © Koyubi Yokoi Akinori {new Date().getFullYear()}
       </p>
     </footer>
   );
