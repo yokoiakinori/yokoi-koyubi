@@ -8,11 +8,12 @@ $ratio: 25%;
 
 .blogWrapper {
   @extend .flexRowNowrap;
-  h1 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    margin-bottom: 40px;
-    font-weight: 800;
+}
+.blogListItem {
+  margin-bottom: 20px;
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
   }
 }
 
@@ -74,15 +75,20 @@ $imgAspect: 1.8;
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 10px;
+    &::before {
+      content: "\f101";
+      font-family: FontAwesome;
+    }
   }
   blockquote {
-    padding: 10px;
+    padding: 25px;
     border-radius: 5px;
+    margin: 0 15px;
     background-color: #ccc;
     color: #333;
   }
   ul {
-    padding: 10px;
+    padding: 15px;
     list-style-type: disc;
     background-color: rgb(245, 240, 240);
     border: solid 1px rgb(158, 156, 156);
