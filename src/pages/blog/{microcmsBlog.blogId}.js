@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../../components/layout.js";
-import SEO from "../../components/seo";
+import SEO from "../../components/seo.js";
 import MicroCmsImage from "../../components/microcmsImage.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
