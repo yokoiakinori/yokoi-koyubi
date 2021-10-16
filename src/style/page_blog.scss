@@ -8,6 +8,9 @@ $ratio: 25%;
 
 .blogWrapper {
   @extend .flexRowNowrap;
+  li {
+    margin-bottom: 20px;
+  }
 }
 
 $imgAspect: 1.8;
