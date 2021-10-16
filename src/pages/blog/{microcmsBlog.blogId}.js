@@ -10,14 +10,13 @@ const BlogPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <div className={"blogWrapper"}>
-          <div>
+        <div className={"blogDetailWrapper"}>
+          <div className={"blogDetailMain"}>
             <MicroCmsImage
               url={data.microcmsBlog.header_image.url}
               compress="auto=compress"
               format="auto=format"
-              width="w=700"
-              height="h=700"
+              width="w=1300"
             />
             <h1>{data.microcmsBlog.title}</h1>
             <button className="blogCategory">
@@ -34,7 +33,7 @@ const BlogPage = ({ data }) => {
               }}
             ></div>
           </div>
-          <div className={"blogSub"}></div>
+          <div className={"blogDetailSub"}></div>
         </div>
       </Layout>
     </main>

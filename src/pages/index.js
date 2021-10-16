@@ -10,11 +10,11 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <div className={"blogWrapper"}>
+        <div className={"blogListWrapper"}>
           <ul>
             {data.allMicrocmsBlog.edges.map(({ node }) => (
-              <li key={node.blogId} className={"blogListItem"}>
-                <Link to={`/blog/${node.blogId}`} className={"blogItem"}>
+              <li key={node.blogId}>
+                <Link to={`/blog/${node.blogId}`} className={"blogListItem"}>
                   <MicroCmsImage
                     url={node.header_image.url}
                     compress="auto=compress"
