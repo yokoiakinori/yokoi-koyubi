@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allMicrocmsBlog {
+    allMicrocmsBlog(sort: { fields: publishedAt, order: DESC }) {
       edges {
         node {
           blogId
