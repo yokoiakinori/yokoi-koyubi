@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby";
 const AboutPage = ({ data }) => {
   return (
     <main>
-      <Layout className="aboutWrapper">
+      <Layout className={"aboutWrapper"}>
         <h1>{data.microcmsAbout.message_title}</h1>
         <div
           dangerouslySetInnerHTML={{

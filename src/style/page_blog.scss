@@ -25,11 +25,22 @@ $imgAspect: 1.8;
     margin-right: 30px;
     border-radius: 5px;
   }
+  h2 {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: $accentColor;
+    color: white;
+  }
   h3 {
     font-size: 22px;
     line-height: 1.5;
     font-weight: 600;
     margin: 0 0 10px;
+  }
+  blockquote {
+    padding: 3px;
+    background-color: #aaa;
+    color: #333;
   }
 }
 
