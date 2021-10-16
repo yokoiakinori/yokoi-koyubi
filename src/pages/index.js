@@ -1,5 +1,6 @@
 import * as React from "react";
 import Layout from "../components/layout.js";
+import SEO from "../components/seo";
 import MicroCmsImage from "../components/microcmsImage.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +11,10 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <Layout>
+        <SEO
+          title="こゆび | 個人ブログ"
+          description="技術情報中心の雑記個人ブログです。基本はサーバサイド関連の技術記事が多めかと思いますがいろいろ挑戦するつもりです！"
+        />
         <div className={"blogListWrapper"}>
           <ul>
             {data.allMicrocmsBlog.edges.map(({ node }) => (

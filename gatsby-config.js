@@ -4,8 +4,13 @@ require("dotenv").config({
 });
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Yokoi-Koyubi",
+    siteUrl: "https://www.coyubi.com",
+    title: "こゆび | 個人ブログ",
+    description:
+      "技術情報中心の雑記個人ブログです。基本はサーバサイド関連の技術記事が多めかと思いますがいろいろ挑戦するつもりです！",
+    author: `Yokoi Akinori`,
+    lang: `ja`,
+    twitterName: `@yokoi_illust`,
   },
   plugins: [
     "gatsby-plugin-sass",

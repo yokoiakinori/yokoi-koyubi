@@ -1,5 +1,6 @@
 import * as React from "react";
 import Layout from "../../components/layout.js";
+import SEO from "../components/seo";
 import MicroCmsImage from "../../components/microcmsImage.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +11,10 @@ const BlogPage = ({ data }) => {
   return (
     <main>
       <Layout>
+        <SEO
+          title={data.microcmsBlog.title}
+          description={data.microcmsBlog.description}
+        />
         <div className={"blogDetailWrapper"}>
           <div className={"blogDetailMain"}>
             <MicroCmsImage
