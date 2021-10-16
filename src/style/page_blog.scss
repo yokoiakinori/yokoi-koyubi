@@ -72,12 +72,18 @@ $imgAspect: 1.8;
     margin-top: 40px;
     margin-bottom: 15px;
   }
+  a {
+    color: $accentColor;
+    border-bottom: dotted 1px $accentColor;
+  }
   h3 {
     font-size: 21px;
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 10px;
+    padding: 10px 0;
     background: linear-gradient(transparent 70%, rgb(247, 210, 2) 70%);
+    display: inline-block;
   }
   blockquote {
     padding: 25px;
