@@ -6,8 +6,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 
+import cheerio from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/night-owl.css";
+
 // markup
 const BlogPage = ({ data }) => {
+  const contentBody = cheerio.load(`${data.microcmsBlog.contents}`);
+  contentBody("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto(contentBody(elm).text());
+    contentBody(elm).html(result.value);
+    contentBody(elm).addClass("hljs");
+  });
+
   return (
     <main>
       <Layout>
@@ -34,7 +45,7 @@ const BlogPage = ({ data }) => {
             <div
               className={"contents"}
               dangerouslySetInnerHTML={{
-                __html: `${data.microcmsBlog.contents}`,
+                __html: contentBody.html(),
               }}
             ></div>
           </div>

@@ -130,4 +130,16 @@ $imgAspect: 1.8;
     padding: 5px;
     margin: 5px 0;
   }
+  pre {
+    margin: 20px 0;
+  }
+  code {
+    padding: 30px !important;
+  }
+}
+
+.hljs {
+  span {
+    border: none;
+  }
 }
