@@ -102,6 +102,9 @@ $imgAspect: 1.8;
     background: linear-gradient(transparent 60%, rgb(247, 210, 2) 60%);
     display: inline-block;
   }
+  img {
+    margin: 0 20px;
+  }
   blockquote {
     padding: 25px;
     line-height: 1.7;
