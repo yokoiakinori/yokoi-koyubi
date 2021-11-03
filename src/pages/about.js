@@ -7,11 +7,12 @@ const AboutPage = ({ data }) => {
   return (
     <main>
       <Layout>
-        <h1 className={"aboutWrapper"}>{data.microcmsAbout.message_title}</h1>
+        <h1>{data.microcmsAbout.message_title}</h1>
         <div
           dangerouslySetInnerHTML={{
             __html: `${data.microcmsAbout.message}`,
           }}
+          className={"aboutWrapper"}
         ></div>
         <div className={"contributor"}>
           <img

@@ -99,7 +99,7 @@ $imgAspect: 1.8;
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 0 10px;
-    background: linear-gradient(transparent 60%, rgb(247, 210, 2) 60%);
+    background: linear-gradient(transparent 60%, rgba($accentColor, 40%) 60%);
     display: inline-block;
   }
   img {
