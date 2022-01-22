@@ -16,6 +16,7 @@
   border: solid 1.5px black;
   transition-duration: 0.3s;
   box-shadow: 3px 3px rgba(black, 0.3);
+  text-align: center;
 
   &:hover {
     background-color: black;
@@ -27,4 +28,8 @@
 .submit {
   margin-top: 30px;
   @extend .flexRowCenter;
+}
+
+.message {
+  margin-bottom: 30px;
 }
